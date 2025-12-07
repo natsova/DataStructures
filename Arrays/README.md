@@ -42,10 +42,12 @@ int[] arr = new int[5]
 * Deep copy for primitives, shallow copy for objects.
 
 # Sorting
-* Arrays.sort(arr);
-  * Dual-pivot quicksort for primitives.
-  * TimSort for objects.
-  * Stable for objects, not necessarily for primitives.
+```java
+Arrays.sort(arr);
+```
+* Dual-pivot quicksort for primitives.
+* TimSort for objects.
+* Stable for objects, not necessarily for primitives.
 
 # Searching
 * Linear search
