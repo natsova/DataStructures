@@ -71,12 +71,12 @@ Arrays.sort(arr);
   jag[1] = new int[5];
   ```
 
-# Use arrays when:
+# Use arrays when
 * Size is fixed or rarely changed.
 * You need fastest possible indexed access.
 * You need tight memory control (arrays are very compact).
 * You are implementing lower-level data structures (ArrayList, heap, tries).
 
-# Avoid arrays when:
+# Avoid arrays when
 * You need frequent insertions/deletions in the middle.
 * The size grows unpredictably (use ArrayList instead).
