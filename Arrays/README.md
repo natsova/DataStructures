@@ -1,6 +1,8 @@
 ## Arrays (Java)
 
+```java
 int[] arr = new int[5]
+```
 
 # Definition
 * A fixed-size contiguous block of memory.
@@ -26,12 +28,12 @@ int[] arr = new int[5]
 
 # Iteration
 * For loop:
-  for (int i = 0; i < arr.length; i++) { ... }
-  for ( int x : arr ) { ... }
+  * for (int i = 0; i < arr.length; i++) { ... }
+  * for ( int x : arr ) { ... }
 
 # Copying and resizing
 * Arrays cannot resize, so “resizing” means allocating a new array.
-  int[] newArr = Arrays.copyOf(oldArr, newSize);
+  * int[] newArr = Arrays.copyOf(oldArr, newSize);
 * Deep copy for primitives, shallow copy for objects.
 
 # Sorting
