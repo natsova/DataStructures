@@ -22,10 +22,44 @@ int[] arr = new int[5]
 # Common pitfalls
 * ArrayIndexOutOfBoundsException.
 * Zero-indexed.
-* Null entries of object arrays.
+* Null entries with object arrays.
 
 # Iteration
 * For loop:
+  for (int i = 0; i < arr.length; i++) { ... }
   for ( int x : arr ) { ... }
 
-#
+# Copying and resizing
+* Arrays cannot resize, so “resizing” means allocating a new array.
+  int[] newArr = Arrays.copyOf(oldArr, newSize);
+* Deep copy for primitives, shallow copy for objects.
+
+# Sorting
+* Arrays.sort(arr);
+  * Dual-pivot quicksort for primitives.
+  * TimSort for objects.
+  * Stable for objects, not necessarily for primitives.
+
+# Searching
+* Linear search
+  for (int x : arr) { ... }
+* Binary search on sorted arrays
+  int idx = Arrays.binarySearch(arr, target);
+
+# Multidimensional arrays
+* Rectangular
+  int[][] matrix = new int[3][4];
+* Jagged
+  int[][] jag = new int[3][];
+  jag[0] = new int[2];
+  jag[1] = new int[5];
+
+# Use arrays when:
+* Size is fixed or rarely changed.
+* You need fastest possible indexed access.
+* You need tight memory control (arrays are very compact).
+* You are implementing lower-level data structures (ArrayList, heap, tries).
+
+# Avoid arrays when:
+* You need frequent insertions/deletions in the middle.
+* The size grows unpredictably (use ArrayList instead).
