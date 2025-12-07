@@ -28,12 +28,17 @@ int[] arr = new int[5]
 
 # Iteration
 * For loop:
-  * for (int i = 0; i < arr.length; i++) { ... }
-  * for ( int x : arr ) { ... }
+  ```java
+  for (int i = 0; i < arr.length; i++) { ... }
+
+  for ( int x : arr ) { ... }
+  ```
 
 # Copying and resizing
 * Arrays cannot resize, so “resizing” means allocating a new array.
-  * int[] newArr = Arrays.copyOf(oldArr, newSize);
+  ```java
+  int[] newArr = Arrays.copyOf(oldArr, newSize);
+  ```
 * Deep copy for primitives, shallow copy for objects.
 
 # Sorting
@@ -44,17 +49,25 @@ int[] arr = new int[5]
 
 # Searching
 * Linear search
+  ```java
   for (int x : arr) { ... }
+  ```
 * Binary search on sorted arrays
+  ```java
   int idx = Arrays.binarySearch(arr, target);
-
+  ```
+  
 # Multidimensional arrays
 * Rectangular
+  ```java
   int[][] matrix = new int[3][4];
+  ```
 * Jagged
+  ```java
   int[][] jag = new int[3][];
   jag[0] = new int[2];
   jag[1] = new int[5];
+  ```
 
 # Use arrays when:
 * Size is fixed or rarely changed.
