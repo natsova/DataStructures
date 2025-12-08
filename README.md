@@ -1,6 +1,6 @@
 # DataStructures Repo
 
-This repository contains a collection of fundamental **data structure and algorithm examples** in Java including arrays, linked lists, stacks, queues, hash tables, heaps, trees, binary search trees, tries, and graphs.
+This repository contains a collection of fundamental **data structure** and **algorithm** examples in Java including arrays, linked lists, stacks, queues, hash tables, heaps, trees, binary search trees, tries, and graphs.
 
 Each method has been annotated with **time complexity** comments to help understand the efficiency of operations and guide decisions when choosing data structures or algorithms.  
 
