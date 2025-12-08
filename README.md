@@ -2,7 +2,7 @@
 
 This repository contains a collection of fundamental data structure and algorithm examples in Java including arrays, linked lists, stacks, queues, hash tables, heaps, trees, binary search trees, tries, and graphs.
 
-**Note:** Each method has been annotated with **time complexity comments** to help understand the efficiency of operations and guide decisions when choosing data structures or algorithms.  
+Each method has been annotated with **time complexity** comments to help understand the efficiency of operations and guide decisions when choosing data structures or algorithms.  
 
 
 # Time Complexity Cheat Sheet (Java Examples)
