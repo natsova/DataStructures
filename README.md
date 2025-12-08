@@ -1,8 +1,9 @@
 # DataStructures Repo
 
-This repository contains a collection of fundamental data structure and algorithm examples in Java, intended for study, practice, and reference.  
+This repository contains a collection of fundamental data structure and algorithm examples in Java including arrays, linked lists, stacks, queues, hash tables, heaps, trees, binary search trees, tries, and graphs.
 
 **Note:** Each method has been annotated with **time complexity comments** to help understand the efficiency of operations and guide decisions when choosing data structures or algorithms.  
+
 
 # Time Complexity Cheat Sheet (Java Examples)
 
@@ -10,21 +11,16 @@ This repository contains a collection of fundamental data structure and algorith
 
 Occurs when the work does not depend on input size.
 
-**Example:**
-
 ```java
 int getFirst(int[] arr) {
     return arr[0];
 }
 ```
 
----
 
 ## O(n) — Linear Time
 
 Occurs when the algorithm touches each element once.
-
-**Example:**
 
 ```java
 int sum(int[] arr) {
@@ -34,13 +30,9 @@ int sum(int[] arr) {
 }
 ```
 
----
-
 ## O(log n) — Logarithmic Time
 
 Occurs when the problem size is cut by a constant factor each step.
-
-**Example:**
 
 ```java
 int binarySearch(int[] arr, int target) {
@@ -55,25 +47,19 @@ int binarySearch(int[] arr, int target) {
 }
 ```
 
----
 
 ## O(n log n) — Linearithmic Time
 
 Occurs when an algorithm performs a log n operation for each of n elements.
 
-**Example (sorting):**
-
 ```java
 Arrays.sort(arr);
 ```
 
----
 
 ## O(n²) — Quadratic Time
 
 Occurs with nested loops over the same data.
-
-**Example:**
 
 ```java
 void printPairs(int[] arr) {
@@ -83,13 +69,10 @@ void printPairs(int[] arr) {
 }
 ```
 
----
 
 ## O(2ⁿ) — Exponential Time
 
 Occurs when exploring all subsets.
-
-**Example:**
 
 ```java
 void subsets(int[] arr, int i) {
@@ -99,13 +82,10 @@ void subsets(int[] arr, int i) {
 }
 ```
 
----
 
 ## O(n!) — Factorial Time
 
 Occurs when generating all permutations.
-
-**Example:**
 
 ```java
 void permute(List<Integer> nums, int start) {
@@ -118,7 +98,6 @@ void permute(List<Integer> nums, int start) {
 }
 ```
 
----
 
 ## Quick Recognition Guide
 
