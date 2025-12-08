@@ -97,14 +97,3 @@ void permute(List<Integer> nums, int start) {
     }
 }
 ```
-
-
-## Quick Recognition Guide
-
-* **Single step** → O(1)
-* **Single loop** → O(n)
-* **Halving** → O(log n)
-* **Loop + halving** → O(n log n)
-* **Nested loops** → O(n²)
-* **Branching recursion** → O(2ⁿ)
-* **Permutations** → O(n!)
