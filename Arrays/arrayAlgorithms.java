@@ -2,7 +2,10 @@ import java.util.Arrays;
 
 public class arrayAlgorithms {
 
+	// ======================= Utility =======================
+	
 	// Print the array
+	// Time: O(n) – must visit every element
 	static void print(int [] arr) {
 		System.out.println();
 		System.out.print("[");
@@ -11,8 +14,11 @@ public class arrayAlgorithms {
 		}
 		System.out.print("]");
 	}
+
+	// ================== Array manipulation ==================
 	
-	// Reverse an array in-place without using a second array
+	// Reverse an array in-place (without using a second array)
+	// Time: O(n), Space: O(1)
 	static int reverse(int[] arr) {
 	    int l = 0, r = arr.length - 1;
 	    while ( l < r ) {
@@ -25,7 +31,8 @@ public class arrayAlgorithms {
 		return r;
 	}
 
-	// Find the max and min in one pass
+	// Find the min and max in one pass
+	// Time: O(n), Space: O(1)
 	static int[] minMax(int[] arr) {
 	    int min = arr[0], max = arr[0];
 	    for ( int x : arr ) {
@@ -36,6 +43,7 @@ public class arrayAlgorithms {
 	}
 
 	// Check if array is sorted (strictly non-decreasing)
+	// Time: O(n), early exit possible
 	static boolean isSorted(int[] arr) {
 	    for ( int i = 1; i < arr.length; i++ ) {
 	        if ( arr[i] < arr[i - 1] ) 
@@ -45,6 +53,7 @@ public class arrayAlgorithms {
 	}
 
 	// Remove duplicates from sorted array in-place and return new length
+	// Time: O(n), Space: O(n) to store result
 	static int[] removeDuplicates(int[] arr) {
 		if (arr.length == 0) return new int[0];
 
@@ -76,6 +85,7 @@ public class arrayAlgorithms {
 	}
 	
 	// Move all zero values to the end while keeping the order of non-zero elements.
+	// Time: O(n), Space: O(1)
 	static int[] moveZeroes(int[] arr) {
 	    int w = 0;
 	    for ( int r = 0; r < arr.length; r++ ) {
@@ -89,6 +99,7 @@ public class arrayAlgorithms {
 	
 	// Two-sum in sorted array (two pointers) - avoids unnecessary checks.
 	// In sorted array, find if any pair sums to target.
+	// Time: O(n), Space: O(1)
 	static boolean twoSum(int[] arr, int target) {
 	    int l = 0, r = arr.length - 1;
 	    while ( l < r ) {
@@ -102,6 +113,7 @@ public class arrayAlgorithms {
 
 	// Max subarray sum (Kadane’s algorithm)
 	// Return max sum of contiguous subarray.
+	// Time: O(n), Space: O(1)
 	static int maxSubArray(int[] arr) {
 	    int cur = arr[0];	// maximum sum of a contiguous subarray ending at index i.
 	    int max = arr[0];	// best sum found so far
@@ -115,6 +127,7 @@ public class arrayAlgorithms {
 	// Prefix sum range query
 	// Precompute a prefix sum array so you can answer sum(l, r) in O(1).
 	// Don’t have to loop through the array to compute sums.
+	// Time: O(n), Space: O(n)
 	static int[] buildPrefix(int[] arr) {
 	    int[] pre = new int[arr.length + 1];	// extra space for leading 0, pre[0] = 0
 	    for ( int i = 1; i < pre.length; i++ ) {
@@ -123,11 +136,13 @@ public class arrayAlgorithms {
 	    return pre;
 	}
 
+	// Range sum query using prefix array
+    // Time: O(1)
 	static int rangeSum(int[] pre, int l, int r) {
 	    return pre[r + 1] - pre[l];	// sum of arr[l..r] in O(1) time
 	}
 
-	/* In an rray of size n containing numbers 0..n, find the missing number.
+	/* In an array of size n containing numbers 0..n, find the missing number.
 	 * XOR is a bitwise operator written as ^. XOR outputs 1 only when the bits are different.
 	 * XOR compares numbers bit-by-bit. Same bits cancel to 0.
 	 * XORing a whole set of numbers leaves only the non-cancelled number.
@@ -143,7 +158,11 @@ public class arrayAlgorithms {
 	 * 
 	 * The XOR method does not work if there are numbers outside 0..n.
 	 */
-	
+
+	// ========== XOR / bit manipulation ==========
+
+	// Find missing number in 0..n array
+    // Time: O(n), Space: O(1)
 	static int missingNumber(int[] arr) {
 	    int xor = 0;
 	    for ( int i = 0; i < arr.length; i++ ) 
@@ -158,6 +177,7 @@ public class arrayAlgorithms {
 
 	// Rotate array right by k.
 	// Technique: Reverse whole array → reverse first k → reverse rest.
+	// Time: O(n), Space: O(1)
 	static int[] rotate(int[] arr, int k) {
 	    int n = arr.length;
 	    k %= n;		// Modulo - remainder after division.
@@ -167,6 +187,7 @@ public class arrayAlgorithms {
 	    return arr;
 	}
 
+	// Reverse helper for rotate
 	static void reverse(int[] arr, int l, int r) {
 	    while (l < r) {
 	        int tmp = arr[l];
@@ -175,7 +196,8 @@ public class arrayAlgorithms {
 	        l++; r--;
 	    }
 	}
-	
+
+	// ====================== Main ======================
 	public static void main(String[] args) {
 		int[] arr = {-100, -44, -44, -10, -8, 2, 0};
 		int[] arr2 = {0, 2, 3};
